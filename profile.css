@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "HelveticaRegular";
+    src: url("HelveticaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: HelveticaRegular, serif;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+main {
+    position: absolute;
+    width: 1127px;
+    height: 595px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: #444444;
+    border-radius: 30px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 71px;
+    margin: 0;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 44px;
+    margin: 29px 0 0;
+    text-align: center;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    margin: 8px 0 0;
+    text-align: center;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 8px 0 0;
+    text-align: center;
+}
+
+button {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 30px;
+    border-width: 3px;
+    background: inherit;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    padding: 10px 30px;
+}
+
+.inline_flex {
+    display: inline-flex;
+}
+
+.image_link {
+    border-radius: 100px;
+    margin: 16px 10px 0 0;
+    width: 24px;
+    height: 24px;
+    background: #C4C4C4;
+}
+
+#cv_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 380px;
+}
+
+#avatar {
+    margin-top: 70px;
+    border-radius: 100px;
+    width: 180px;
+    height: 180px;
+    background: #C4C4C4;
+}
+
+#avatar_shadow {
+    position: absolute;
+    border-radius: 100px;
+    width: 180px;
+    height: 180px;
+    left: 112px;
+    top: 82px;
+    background: #C4C4C4;
+    opacity: 0.2;
+}
+
+#cv_button_download {
+    margin: 57px 0 0;
+}
+
+#cv_footer {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    margin: 66px 0 0;
+}
+
+#basic_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    background: #222222;
+    border-radius: 30px;
+}
