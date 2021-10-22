@@ -6,23 +6,29 @@
     <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-    <main class="inline_flex">
-        <div id="cv_info">
-            <img id="avatar" src="profile_img.jpg" alt="avatar image" role="img">
-            <span id="avatar_shadow" role="img"></span>
-            <h3>Lutsenko Dmitrii</h3>
-            <h5>Developer</h5>
-            <div class="inline_flex">
-                <img class="image_link" src="profile_img.jpg" alt="link" role="link">
-                <img class="image_link" src="profile_img.jpg" alt="link" role="link">
-                <img class="image_link" src="profile_img.jpg" alt="link" role="link">
+    <main class="portfolio-card">
+        <div class="portfolio-card__cv">
+            <div class="cv__avatar" role="img"></div>
+            <span class="cv__avatar-shadow" role="img"></span>
+            <h3 class="cv__name">Lutsenko Dmitrii</h3>
+            <h5 class="cv__position">Developer</h5>
+            <div class="cv__social-medias">
+                <a class="social-medias__image-link" href="https://vk.com/id18153011" role="link">
+                    <img src="res/vkontakte_24_24.png" alt="vk logo">
+                </a>
+                <a class="social-medias__image-link" href="https://ok.ru/profile/569456047093" role="link">
+                    <img src="res/odnoklassniki_24_24.png" alt="ok logo">
+                </a>
+                <a class="social-medias__image-link" href="https://github.com/LutsenkoDm" role="link">
+                    <img src="res/git_24_24.png" alt="git logo">
+                </a>
             </div>
-            <button id="cv_button_download">Download CV</button>
-            <footer id="cv_footer">@2021 All rights reserved.</footer>
+            <button class="cv__button-download">Download CV</button>
+            <footer class="cv__footer">@2021 All rights reserved.</footer>
         </div>
-        <div id="basic_info">
-            <h1>Lutsenko Dmitrii</h1>
-            <h4>Developer</h4>
+        <div class="portfolio-card__basic-info">
+            <h1 class="basic-info__name">Lutsenko Dmitrii</h1>
+            <h4 class="basic-info__position">Developer</h4>
         </div>
     </main>
 </body>

@@ -1,17 +1,13 @@
-@font-face {
-    font-family: "HelveticaRegular";
-    src: url("HelveticaRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
 body {
-    font-family: HelveticaRegular, serif;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
     font-style: normal;
     color: #FFFFFF;
 }
 
-main {
+.portfolio-card {
+    display: inline-flex;
     position: absolute;
     width: 1127px;
     height: 595px;
@@ -23,79 +19,23 @@ main {
     border-radius: 30px;
 }
 
-h1 {
-    font-weight: 700;
-    font-size: 62px;
-    line-height: 71px;
-    margin: 0;
-    text-align: center;
-}
-
-h3 {
-    font-weight: 700;
-    font-size: 38px;
-    line-height: 44px;
-    margin: 29px 0 0;
-    text-align: center;
-}
-
-h4 {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 25px;
-    margin: 8px 0 0;
-    text-align: center;
-}
-
-h5 {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    margin: 8px 0 0;
-    text-align: center;
-}
-
-button {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    text-align: center;
-    border-radius: 30px;
-    border-width: 3px;
-    background: inherit;
-    border-color: #FFFFFF;
-    color: #FFFFFF;
-    padding: 10px 30px;
-}
-
-.inline_flex {
-    display: inline-flex;
-}
-
-.image_link {
-    border-radius: 100px;
-    margin: 16px 10px 0 0;
-    width: 24px;
-    height: 24px;
-    background: #C4C4C4;
-}
-
-#cv_info {
+.portfolio-card__cv {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-basis: 380px;
 }
 
-#avatar {
+.cv__avatar {
     margin-top: 70px;
     border-radius: 100px;
     width: 180px;
     height: 180px;
-    background: #C4C4C4;
+    background: url("res/profile_img.jpg");
+    background-size: cover;
 }
 
-#avatar_shadow {
+.cv__avatar-shadow {
     position: absolute;
     border-radius: 100px;
     width: 180px;
@@ -106,11 +46,49 @@ button {
     opacity: 0.2;
 }
 
-#cv_button_download {
+
+.cv__name {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 44px;
+    margin: 29px 0 0;
+    text-align: center;
+}
+
+.cv__position {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 8px 0 0;
+    text-align: center;
+}
+
+.cv__social-medias {
+    display: inline-flex;
+}
+
+.social-medias__image-link {
+    border-radius: 100px;
+    margin: 16px 10px 0 0;
+    width: 24px;
+    height: 24px;
+}
+
+.cv__button-download {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 30px;
+    border-width: 3px;
+    background: inherit;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    padding: 10px 30px;
     margin: 57px 0 0;
 }
 
-#cv_footer {
+.cv__footer {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -118,7 +96,7 @@ button {
     margin: 66px 0 0;
 }
 
-#basic_info {
+.portfolio-card__basic-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,4 +104,21 @@ button {
     justify-content: center;
     background: #222222;
     border-radius: 30px;
+}
+
+.basic-info__name{
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 71px;
+    margin: 0;
+    text-align: center;
+}
+
+
+.basic-info__position {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    margin: 8px 0 0;
+    text-align: center;
 }
