@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Lutsenko Dmitrii Profile</title>
     <link rel="stylesheet" href="profile.css">
+    <script type="text/javascript" src="portfolio-card.js"></script>
 </head>
 <body>
-    <main class="portfolio-card">
+    <main id="portfolio-card" class="portfolio-card dark-theme">
         <div class="portfolio-card__cv">
             <div class="cv__avatar" role="img"></div>
             <span class="cv__avatar-shadow" role="img"></span>
@@ -30,6 +31,7 @@
             <h1 class="basic-info__name">Lutsenko Dmitrii</h1>
             <h4 class="basic-info__position">Developer</h4>
         </div>
+        <div class="portfolio-card__theme-switcher" onclick="changeTheme()"></div>
     </main>
 </body>
 </html>
