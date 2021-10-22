@@ -1,5 +1,5 @@
 function changeTheme() {
-    let mainClassList = document.querySelector("#portfolio-card").classList
-    mainClassList.toggle("dark-theme")
-    mainClassList.toggle("light-theme")
+    let portfolioCardClassList = document.querySelector("#portfolio-card").classList
+    portfolioCardClassList.toggle("dark-theme")
+    portfolioCardClassList.toggle("light-theme")
 }
