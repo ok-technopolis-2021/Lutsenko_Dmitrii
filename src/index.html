@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Lutsenko Dmitrii Profile</title>
-    <link rel="stylesheet" href="profile.css">
-    <script type="text/javascript" src="portfolio-card.js"></script>
+    <!-- inject:css -->
+    <!-- endinject -->
 </head>
 <body>
     <main id="portfolio-card" class="portfolio-card dark-theme">
@@ -15,13 +15,13 @@
             <h5 class="cv__position">Developer</h5>
             <div class="cv__social-medias">
                 <a class="social-medias__image-link" href="https://vk.com/id18153011" role="link">
-                    <img src="res/vkontakte_24_24.png" alt="vk logo">
+                    <img src="./assets/vkontakte_24_24.png" alt="vk logo">
                 </a>
                 <a class="social-medias__image-link" href="https://ok.ru/profile/569456047093" role="link">
-                    <img src="res/odnoklassniki_24_24.png" alt="ok logo">
+                    <img src="./assets/odnoklassniki_24_24.png" alt="ok logo">
                 </a>
                 <a class="social-medias__image-link" href="https://github.com/LutsenkoDm" role="link">
-                    <img src="res/git_24_24.png" alt="git logo">
+                    <img src="./assets/git_24_24.png" alt="git logo">
                 </a>
             </div>
             <button class="cv__button-download">Download CV</button>
@@ -31,7 +31,9 @@
             <h1 class="basic-info__name">Lutsenko Dmitrii</h1>
             <h4 class="basic-info__position">Developer</h4>
         </div>
-        <div class="portfolio-card__theme-switcher" onclick="changeTheme()"></div>
+        <div id="portfolio-card-theme-switcher" class="portfolio-card__theme-switcher"></div>
     </main>
+    <!-- inject:js -->
+    <!-- endinject -->
 </body>
 </html>
