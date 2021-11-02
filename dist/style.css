@@ -305,7 +305,7 @@ template {
 }
 :root .light-theme {
   color: #000000;
-  background-color: #646464;
+  background-color: #888888;
   --portfolio-card-background: #BBBBBB;
   --portfolio-card__basic-info-background: #DDDDDD;
   --cv__avatar-shadow-background: #FFFFFF;
