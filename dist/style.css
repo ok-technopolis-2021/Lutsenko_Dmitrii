@@ -355,7 +355,7 @@ body {
   background: url("./assets/profile_img.jpg");
   background-size: cover;
 }
-.cv__avatar-shadow {
+.cv__avatar .cv__avatar-shadow {
   position: absolute;
   border-radius: 100px;
   width: 180px;

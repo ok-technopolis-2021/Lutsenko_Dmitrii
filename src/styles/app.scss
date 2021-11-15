@@ -56,17 +56,17 @@ body {
     height: 180px;
     background: url("./assets/profile_img.jpg");
     background-size: cover;
-}
 
-.cv__avatar-shadow {
-    position: absolute;
-    border-radius: 100px;
-    width: 180px;
-    height: 180px;
-    left: 112px;
-    top: 82px;
-    background: var(--cv__avatar-shadow-background);
-    opacity: 0.2;
+    .cv__avatar-shadow {
+        position: absolute;
+        border-radius: 100px;
+        width: 180px;
+        height: 180px;
+        left: 112px;
+        top: 82px;
+        background: var(--cv__avatar-shadow-background);
+        opacity: 0.2;
+    }
 }
 
 .cv__name {
