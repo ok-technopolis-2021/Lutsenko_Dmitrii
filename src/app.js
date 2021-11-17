@@ -1,19 +1,16 @@
 const target = document.querySelector('body')
-const skillsBlock = document.createElement("main")
-const skillsHeader = document.createElement("header")
-const title = document.createElement("h1")
-const addButton = document.createElement("button")
+const skillsBlock = createElementWithClassName('main', 'js-skills-block')
+const skillsHeader = createElementWithClassName('header', 'js-skills-header')
+const addButton = createElementWithClassName('button', 'js-skills-add-button')
+const title = document.createElement('h1')
 
-skillsBlock.className = 'js-skills-block'
-skillsHeader.className = 'js-skills-header'
-addButton.className = 'js-skills-add-button'
 title.innerText = 'Coding Skills'
 
 skillsHeader.append(title)
 skillsHeader.append(addButton)
 skillsBlock.append(skillsHeader)
 target.append(skillsBlock)
-document.addEventListener("DOMContentLoaded", event => {
+document.addEventListener('DOMContentLoaded', event => {
     addButton.addEventListener('click', addSkillForm);
 });
 
@@ -23,21 +20,13 @@ function addSkillForm() {
 }
 
 function generateSkillForm() {
-    const skillForm = document.createElement("form")
-    const skillInfo = document.createElement("div")
-    const name = document.createElement("input")
-    const percent = document.createElement("input")
-    const saveButton = document.createElement("button")
-    const progress = document.createElement("progress")
-    const progressWrapper = document.createElement("div")
-
-    skillForm.className = 'js-skill-form'
-    skillInfo.className = 'js-skill-info'
-    name.className = 'js-skill-name'
-    percent.className = 'js-skill-percent'
-    saveButton.className = 'js-skills-save-button'
-    progress.className = 'js-skill-progress'
-    progressWrapper.className = 'js-skill-progress-wrapper'
+    const skillForm = createElementWithClassName('form', 'js-skill-form')
+    const skillInfo = createElementWithClassName('div', 'js-skill-info')
+    const name = createElementWithClassName('input', 'js-skill-name')
+    const percent = createElementWithClassName('input', 'js-skill-percent')
+    const saveButton = createElementWithClassName('button', 'js-skills-save-button')
+    const progress = createElementWithClassName('progress', 'js-skill-progress')
+    const progressWrapper = createElementWithClassName('div', 'js-skill-progress-wrapper')
 
     configureName(name)
     configurePercent(percent)
@@ -53,14 +42,13 @@ function generateSkillForm() {
         // но почему-то event.preventDefault() тогда не работает
         // Даже если вынести только if, а event.preventDefault() сделать здесь на месте
         if (validateSkillForm(skillForm)) {
-            let savedName = document.createElement("h3")
-            let savedPercent = document.createElement("label")
-            let removeButton = document.createElement("button")
+            let savedName = document.createElement('h3')
+            let savedPercent = document.createElement('label')
+            let removeButton = createElementWithClassName('button', 'js-skills-remove-button')
             savedName.innerText = name.value
             savedPercent = percent.value + '%'
-            removeButton.className = 'js-skills-remove-button'
             removeButton.setAttribute('type', 'button')
-            removeButton.addEventListener("click", event => {
+            removeButton.addEventListener('click', event => {
                 skillForm.remove()
             })
             skillForm.querySelector('.' + name.className).replaceWith(savedName)
@@ -101,4 +89,10 @@ function configureProgress(progress, percent) {
 
 function validateSkillForm(form) {
     return form.checkValidity()
+}
+
+function createElementWithClassName(tag, className) {
+    const element = document.createElement(tag)
+    element.className = className
+    return element
 }
