@@ -1,163 +1,159 @@
 @import "reset.scss";
 
 body {
-  font-family: Helvetica, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  font-style: normal;
-  font-weight: 400;
-  color: #101010;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    color: #101010;
 }
 
 .js-skills-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .js-skills-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  width: 40%;
-  height: 50%;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  padding: 30px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  scroll-behavior: smooth;
-  background-color: #939292;
-  border-radius: 10px;
-  overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 40%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    padding: 30px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    scroll-behavior: smooth;
+    background-color: #939292;
+    border-radius: 10px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #565353;
+    }
+
 }
 
 .js-skills-add-button {
-  border-radius: 100px;
-  align-self: center;
-  margin-bottom: 10px;
-  border-width: 0;
-  height: 32px;
-  width: 32px;
-  background-color: white;
-  background-image: url("./assets/plus.png");
-  background-size: cover;
-  outline: none;
+    border-radius: 100px;
+    align-self: center;
+    margin-bottom: 10px;
+    border-width: 0;
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    background-image: url("./assets/plus.png");
+    background-size: cover;
+    outline: none;
 }
 
 .js-skill-form {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+
+    input {
+        font-size: 22px;
+        padding: 4px;
+        border: 0;
+
+        &::placeholder {
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+
+        &:valid {
+            border: 2px solid #47d019;
+            border-radius: 8px;
+            outline: none;
+            box-shadow: 0 0 12px #359f86;
+        }
+
+        &:invalid {
+            border: 2px solid crimson;
+            border-radius: 8px;
+            outline: none;
+            box-shadow: 0 0 12px #ff0017;
+        }
+
+        &:placeholder-shown {
+            border-radius: 8px;
+            border: 2px solid #ffe800;
+            outline: none;
+            box-shadow: 0 0 12px #8c9b21;
+        }
+    }
+
+    button {
+        border-radius: 100px;
+        border-width: 0;
+        align-self: center;
+        height: 32px;
+        width: 32px;
+        background-color: white;
+        background-size: cover;
+        outline: none;
+    }
 }
 
-.js-skill-progress-wrapper{
-  display: flex;
-  flex-direction: column;
-  margin-right: 5px;
-  width: 100%;
+.js-skill-progress-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    width: 100%;
 }
 
 .js-skill-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5px;
-  background-color: #c4c4c4;
-  border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #c4c4c4;
+    border-radius: 5px;
 }
 
 .js-skill-name {
-  font-size: 22px;
-  font-weight: 600;
-  width: 30%;
-  border: 0;
-  background-color: #c4c4c4;
+    font-weight: 600;
+    width: 30%;
 }
 
 .js-skill-percent {
-  font-size: 22px;
-  color: #2a2a2a;
-  width: 11%;
-  align-self: end;
-  text-align: center;
-}
-
-.js-skill-name::placeholder, .js-skill-percent::placeholder{
-  padding: 5px;
-  font-size: 16px;
-}
-
-.js-skill-name:focus::placeholder, .js-skill-percent:focus::placeholder {
-  color: transparent;
-}
-
-.js-skill-name:valid, .js-skill-percent:valid {
-  border: 2px solid #47d019;
-  border-radius: 8px;
-  outline: none;
-  box-shadow: 0 0 12px #359f86;
-}
-
-.js-skill-name:invalid, .js-skill-percent:invalid {
-  border: 2px solid crimson;
-  border-radius: 8px;
-  outline: none;
-  box-shadow: 0 0 12px #ff0017;
-}
-
-.js-skill-name:placeholder-shown, .js-skill-percent:placeholder-shown {
-  border-radius: 8px;
-  border: 2px solid #d0a419;
-  outline: none;
-  box-shadow: 0 0 12px #aeb76f;
+    color: #2a2a2a;
+    width: 12%;
+    align-self: end;
+    text-align: center;
 }
 
 .js-skills-save-button {
-  border-radius: 100px;
-  border-width: 0;
-  align-self: center;
-  height: 32px;
-  width: 32px;
-  background-color: white;
-  background-image: url("./assets/accept.png");
-  background-size: cover;
-  outline: none;
+    background-image: url("./assets/accept.png");
 }
 
 .js-skills-remove-button {
-  border-radius: 100px;
-  border-width: 0;
-  align-self: center;
-  height: 32px;
-  width: 32px;
-  background-color: white;
-  background-image: url("./assets/minus.png");
-  background-size: cover;
-  outline: none;
+    background-image: url("./assets/minus.png");
 }
 
 .js-skill-progress {
-  width: 100%;
+    width: 100%;
 }
 
-.js-skills-block::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  background-color: #F5F5F5;
-}
-
-.js-skills-block::-webkit-scrollbar
-{
-  width: 12px;
-  background-color: #F5F5F5;
-}
-
-.js-skills-block::-webkit-scrollbar-thumb
-{
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #565353;
-}
