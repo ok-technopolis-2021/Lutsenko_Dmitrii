@@ -1,3 +1,4 @@
+const typeScript = require('@rollup/plugin-typescript');
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const less = require('gulp-less');
@@ -7,12 +8,13 @@ const image = require('gulp-image');
 
 const assetsPath = 'src/assets/*.{jpeg,psd,bmp,gif,png,tiff,icon,ico}';
 const stylesPath = './src/styles/**/*.scss';
-const jsPath = 'src/**/*.js';
+const tsPath = 'src/**/*.ts';
 const htmlPath = './src/index.html';
 const distPath = './dist/';
 const rollupConfig = {
-    input: 'src/app.js',
+    input: 'src/app.ts',
     plugins: [
+        typeScript()
         // Не используем в rollup, используем это в gulp
         // scss(), // will output compiled styles to output.css
         // html({ template }),
@@ -36,7 +38,7 @@ gulp.task('rollup', async (done) => {
     const bundle = await rollup.rollup(rollupConfig);
 
     bundle.write({
-        format: 'esm',
+        format: 'iife',
         file: 'dist/app.js'
     });
 
@@ -59,7 +61,7 @@ gulp.task('css', () => {
 **/
 gulp.task('watch', function (done) {
     gulp.watch(stylesPath, gulp.series('css'));
-    gulp.watch(jsPath, gulp.series('rollup'));
+    gulp.watch(tsPath, gulp.series('rollup'));
     done();
 });
 
