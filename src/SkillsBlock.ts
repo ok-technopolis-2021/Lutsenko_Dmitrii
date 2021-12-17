@@ -1,6 +1,6 @@
 import {SkillForm} from "./SkillForm"
 import {SkillFormElementGenerator as elementGenerator} from "./SkillFormElementGenerator"
-import createElementWithClassName from "./skillFormUtils";
+import {createElementWithClassName} from "./skillFormUtils";
 
 export class SkillsBlock {
 

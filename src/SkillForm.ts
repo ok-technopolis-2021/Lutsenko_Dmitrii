@@ -1,6 +1,6 @@
 import * as elementsAttributeConfigs from "./SkillFormElementsAttributeConfigs"
 import {SkillFormElementGenerator as elementGenerator} from "./SkillFormElementGenerator"
-import createElementWithClassName from "./skillFormUtils";
+import {createElementWithClassName} from "./skillFormUtils";
 
 export class SkillForm {
     private skillForm: HTMLFormElement
@@ -50,9 +50,7 @@ export class SkillForm {
             this.savedName.textContent = this.name.value
             this.savedPercent.textContent = this.percent.value + '%'
             for (let element of Array.from(this.skillForm.elements)) {
-                this.skillForm
-                    .querySelector('.' + element.className)
-                    .replaceWith(this.onSavingTransformationMap.get(element))
+                element.parentNode.replaceChild(this.onSavingTransformationMap.get(element), element)
             }
         }
     }

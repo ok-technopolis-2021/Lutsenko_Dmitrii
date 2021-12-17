@@ -1,4 +1,4 @@
-import createElementWithClassName from "./skillFormUtils";
+import {createElementWithClassName} from "./skillFormUtils";
 
 export class SkillFormElementGenerator {
 
