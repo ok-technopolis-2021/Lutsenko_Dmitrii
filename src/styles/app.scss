@@ -1,156 +1,159 @@
 @import "reset.scss";
 
-:root .light-theme {
-    color: #000000;
-    background-color: #808080;
-    --portfolio-card-background: #BBBBBB;
-    --portfolio-card__basic-info-background: #DDDDDD;
-    --cv__avatar-shadow-background: #FFFFFF;
-    --button-color: #000000;
-    --button-border-color: #000000;
-    --portfolio-card__theme-switcher-color: #C4C3C3;
-}
-
-:root .dark-theme {
-    color: #FFFFFF;
-    background-color: #FFFFFF;
-    --portfolio-card-background: #444444;
-    --portfolio-card__basic-info-background: #222222;
-    --cv__avatar-shadow-background: #C4C4C4;
-    --button-color: #FFFFFF;
-    --button-border-color: #FFFFFF;
-    --portfolio-card__theme-switcher-color: #575656;
-}
-
 body {
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     line-height: 20px;
     font-style: normal;
+    font-weight: 400;
+    color: #101010;
 }
 
-.portfolio-card {
-    display: inline-flex;
-    position: absolute;
-    width: 1127px;
-    height: 595px;
+.js-skills-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.js-skills-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 40%;
+    height: 50%;
     top: 50%;
     left: 50%;
     margin-right: -50%;
+    padding: 30px;
     transform: translate(-50%, -50%);
-    background: var(--portfolio-card-background);
-    border-radius: 30px;
+    position: absolute;
+    scroll-behavior: smooth;
+    background-color: #939292;
+    border-radius: 10px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #565353;
+    }
+
 }
 
-.portfolio-card__cv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-basis: 380px;
-}
-
-.cv__avatar {
-    margin-top: 70px;
+.js-skills-add-button {
     border-radius: 100px;
-    width: 180px;
-    height: 180px;
-    background: url("./assets/profile_img.jpg");
+    align-self: center;
+    margin-bottom: 10px;
+    border-width: 0;
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    background-image: url("./assets/plus.png");
     background-size: cover;
+    outline: none;
+}
 
-    .cv__avatar-shadow {
-        position: absolute;
+.js-skill-form {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+
+    input {
+        font-size: 22px;
+        padding: 4px;
+        border: 0;
+
+        &::placeholder {
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+
+        &:valid {
+            border: 2px solid #47d019;
+            border-radius: 8px;
+            outline: none;
+            box-shadow: 0 0 12px #359f86;
+        }
+
+        &:invalid {
+            border: 2px solid crimson;
+            border-radius: 8px;
+            outline: none;
+            box-shadow: 0 0 12px #ff0017;
+        }
+
+        &:placeholder-shown {
+            border-radius: 8px;
+            border: 2px solid #ffe800;
+            outline: none;
+            box-shadow: 0 0 12px #8c9b21;
+        }
+    }
+
+    button {
         border-radius: 100px;
-        width: 180px;
-        height: 180px;
-        left: 112px;
-        top: 82px;
-        background: var(--cv__avatar-shadow-background);
-        opacity: 0.2;
+        border-width: 0;
+        align-self: center;
+        height: 32px;
+        width: 32px;
+        background-color: white;
+        background-size: cover;
+        outline: none;
     }
 }
 
-.cv__name {
-    font-weight: 700;
-    font-size: 38px;
-    line-height: 44px;
-    margin: 29px 0 0;
-    text-align: center;
-}
-
-.cv__position {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    margin: 8px 0 0;
-    text-align: center;
-}
-
-.cv__social-medias {
-    display: inline-flex;
-}
-
-.social-medias__image-link {
-    border-radius: 100px;
-    margin: 16px 10px 0 0;
-    width: 24px;
-    height: 24px;
-}
-
-.cv__button-download {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    text-align: center;
-    border-radius: 30px;
-    border-width: 3px;
-    background: inherit;
-    border-color: var(--button-border-color);
-    color: var(--button-color);
-    padding: 10px 30px;
-    margin: 57px 0 0;
-}
-
-.cv__footer {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    margin: 66px 0 0;
-}
-
-.portfolio-card__basic-info {
+.js-skill-progress-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: center;
-    background: var(--portfolio-card__basic-info-background);
-    border-radius: 30px;
+    margin-right: 5px;
+    width: 100%;
 }
 
-.basic-info__name{
-    font-weight: 700;
-    font-size: 62px;
-    line-height: 71px;
-    margin: 0;
+.js-skill-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #c4c4c4;
+    border-radius: 5px;
+}
+
+.js-skill-name {
+    font-weight: 600;
+    width: 30%;
+}
+
+.js-skill-percent {
+    color: #2a2a2a;
+    width: 12%;
+    align-self: end;
     text-align: center;
 }
 
-.basic-info__position {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 25px;
-    margin: 8px 0 0;
-    text-align: center;
+.js-skills-save-button {
+    background-image: url("./assets/accept.png");
 }
 
-.portfolio-card__theme-switcher {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-image: url("./assets/light_dark_mode_changer_24_24.png");
-    border-radius: 100px;
-    width: 24px;
-    height: 24px;
-    background-color: var(--portfolio-card__theme-switcher-color);
+.js-skills-remove-button {
+    background-image: url("./assets/minus.png");
 }
+
+.js-skill-progress {
+    width: 100%;
+}
+
